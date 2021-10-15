@@ -1,0 +1,258 @@
+.average-section {
+  max-width: 1300px;
+  margin: 0 auto 10px;
+}
+
+.wrapper {
+  display: flex;
+  max-width: 1220px;
+  justify-content: center;
+  flex: 0 1 100%;
+  margin: 0 auto;
+  padding-top: 44px;
+}
+
+.tabs-wrapper {
+  display: flex;
+  flex-basis: 100%;
+  max-width: 1220px;
+  margin-left: 1.4%;
+}
+
+.content {
+  display: none;
+  width: 100%;
+}
+
+.tab {
+  text-align: center;
+  height: 31px;
+}
+
+.tab:hover {
+  cursor: pointer;
+}
+
+.tabs-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input {
+  display: none;
+}
+
+#tab-1:checked ~ .tab-1 {
+  color: #2DC033;
+  border-bottom: 2px solid #2DC033;
+}
+
+#tab-1:checked ~.content-1 {
+  display: block;
+}
+
+#tab-2:checked ~ .tab-2 {
+  color: #2DC033;
+  border-bottom: 2px solid #2DC033;
+}
+#tab-2:checked ~.content-2 {
+  display: block;
+}
+
+.tab-1 {
+  width: 86px;
+}
+
+.tab-2 {
+  width: 176px;
+  padding-left: 4px;
+}
+
+
+.cur-price {
+  color: #4F4E57;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.avg-p {
+  color: #4F4E57;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  padding-top: 15px;
+}
+
+#avg-price-of-pos {
+  color: #4F4E57;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  padding-left: 2px;
+  padding-top: 31px;
+}
+#avg-price-of-pos::after {
+  content: ' $';
+  color: #4F4E57;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.avg-price-position-container{
+  display: flex;
+}
+
+.current-price {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 22.2%;
+  max-width: 270px;
+}
+
+.cur-price {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(79, 78, 87, 1);
+  padding-top: 2px;
+  margin-bottom: 6px;
+}
+
+.input-price {
+  display: flex;
+  outline: none;
+  color: #909090;
+  border: 2px solid rgba(52, 188, 72, 0.5);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  height: 38px;
+  padding-left: 12px;
+  border-radius: 8px;
+  margin-left: -2px;
+  background: none;
+}
+
+.profit {
+  padding-left: 28px;
+}
+
+.cur-profit {
+  margin-top: 11px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: rgba(144, 144, 144, 1);
+}
+
+.count-of-share {
+  display: flex;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #4F4E57;
+}
+
+#shares {
+  padding-top: 29px;
+  padding-left: 3px;
+}
+#shares::after {
+  content: ' шт';
+}
+
+.count-of-share p {
+  padding-top: 12px;
+}
+
+.current-price-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.avg-price-container {
+  display: flex;
+  padding-top: 18px;
+}
+
+.right {
+  padding-left: 25px;
+}
+
+.avg-price {
+  display: inline-flex;
+  flex-direction: column;
+  width: 22.2%;
+}
+
+.wish-price {
+  color: #4F4E57;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: 6px;
+}
+
+
+  @media (max-width:999px) {
+    .wrapper {
+      flex: 0 1 81.1%;
+    }
+    .tabs-wrapper {
+      flex-basis: 81.1%;
+      padding: 0;
+      margin: 0 1.4%;
+      min-width: 476px;
+    }
+    .avg-price-container {
+     min-width: 476px;
+    }
+    .avg-price {
+      width: 47.5%;
+      max-width: 270px;
+    }
+    .current-price-container {
+      min-width: 476px;
+    }
+    .current-price {
+      flex-basis: 38.4%;
+      max-width: 270px;
+    }
+  }
+
+  @media (max-width:500px) {
+    .wrapper {
+      padding-top: 0px;
+    }
+    .tabs-wrapper {
+      flex-basis: 93.5%;
+      margin: 0 1.4%;
+      min-width: 374px;
+    }
+    .avg-price-container {
+      min-width: 374px;
+    }
+    .avg-price {
+      flex-basis: 47.3%;
+    }
+    .right {
+      padding-left: 22px;
+    }
+    .current-price-container {
+      min-width: 374px;
+    }
+    .current-price {
+      flex: 0 1 47.3%;
+      min-width: 169px;
+    }
+    .profit {
+      padding-left: 16px;
+    }
+  }
+
+
+

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/average_section.css" />
+    <link rel="stylesheet" href="./css/selector.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="header-container">
+          <div class="header-container-content">
+            <div class="header-h1">
+              <h1 class="header-name">Калькулятор расчёта среднего</h1>
+            </div>
+            <div class="header-spot">
+              <div class="select-box">
+                <div class="options-container">
+                  <div class="option">
+                    <input
+                      type="radio"
+                      class="radio"
+                      id="tal"
+                      name="category"
+                    />
+                    <label for="tal" class="lable">TAL</label>
+                  </div>
+                  <div class="option">
+                    <input
+                      type="radio"
+                      class="radio"
+                      id="rig"
+                      name="category"
+                    />
+                    <label for="rig" class="lable">RIG</label>
+                  </div>
+                  <div class="option">
+                    <input
+                      type="radio"
+                      class="radio"
+                      id="lpl"
+                      name="category"
+                    />
+                    <label for="lpl" class="lable">LPL</label>
+                  </div>
+                </div>
+                <div class="selected">SPOT</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="points-in-out">
+        <div class="points-in">
+          <div class="points"><h2>Точки входа</h2></div>
+          <div class="container" id="container1">
+            <div class="container-table">
+              <div class="container-content">
+                <div class="container-content-header">
+                  <div class="table-column-name"><span>кол-во акций</span></div>
+                  <div class="table-column-name"><span>цена покупки</span></div>
+                  <div class="table-column-name"><span>сумма</span></div>
+                  <div class="empty"><span></span></div>
+                </div>
+                <div class="no-recording" id="norec-1">Нет записей</div>
+              </div>
+            </div>
+            <div class="container-add-field">
+              <div class="container-add-field-content">
+                <div class="counter">
+                  <input
+                    type="number"
+                    id="count-to-buy"
+                    class="counter-units"
+                    value=""
+                  />
+                  <div class="buttons-p-m">
+                    <button class="minus" id="mn1"></button
+                    ><button class="plus" id="pl1"></button>
+                  </div>
+                </div>
+                <div class="unit">
+                  <input
+                    type="number"
+                    class="unit-price"
+                    id="add-input"
+                    placeholder="0 $"
+                  />
+                </div>
+                <button class="add" id="buy" disabled>Добавить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="points-out">
+          <div class="points"><h2>Точки выхода</h2></div>
+          <div class="container" id="container2">
+            <div class="container-table">
+              <div class="container-content">
+                <div class="container-content-header">
+                  <div class="table-column-name"><span>кол-во акций</span></div>
+                  <div class="table-column-name"><span>цена продажи</span></div>
+                  <div class="table-column-name"><span>сумма</span></div>
+                  <div class="empty"><span></span></div>
+                </div>
+                <div class="no-recording" id="norec-2">Нет записей</div>
+              </div>
+            </div>
+            <div class="container-add-field">
+              <div class="container-add-field-content">
+                <div class="counter">
+                  <input
+                    type="number"
+                    id="count-to-sell"
+                    class="counter-units"
+                  />
+                  <div class="buttons-p-m">
+                    <button class="minus" id="mn2"></button
+                    ><button class="plus" id="pl2"></button>
+                  </div>
+                </div>
+                <div class="unit">
+                  <input
+                    type="number"
+                    class="unit-price"
+                    id="sell-input"
+                    placeholder="0 $"
+                  />
+                </div>
+                <button class="add" id="sell" disabled>Продать</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="average-section">
+        <div class="wrapper">
+          <div class="tabs-wrapper">
+            <input class="input" type="radio" name="tabs" id="tab-1" checked />
+            <input class="input" type="radio" name="tabs" id="tab-2" />
+            <label class="tab tab-1" for="tab-1">Среднее</label>
+            <label class="tab tab-2" for="tab-2">Усреднение позиций</label>
+            <div class="content content-1">
+              <div class="avg-price-position-container">
+                <p class="avg-p">Средняя цена позиции:</p>
+                <span id="avg-price-of-pos">0</span>
+              </div>
+              <div class="current-price-container">
+                <div class="current-price">
+                  <p class="cur-price">Текущая цена</p>
+                  <input
+                    id="cur-price-1"
+                    type="text"
+                    placeholder=""
+                    class="input-price"
+                  />
+                </div>
+                <div class="current-price profit">
+                  <p class="cur-price">Текущий профит</p>
+                  <div class="cur-profit" id="cur-profit-1">+ 0 $</div>
+                </div>
+              </div>
+            </div>
+            <div class="content content-2">
+              <div class="avg-price-container">
+                <div class="avg-price">
+                  <p class="wish-price">Желаемая средняя цена</p>
+                  <input
+                    id="wish-price-1"
+                    type="number"
+                    placeholder=""
+                    class="input-price"
+                  />
+                </div>
+                <div class="avg-price right">
+                  <p class="wish-price">Текущая цена</p>
+                  <input
+                    id="wish-price-2"
+                    type="number"
+                    placeholder=""
+                    class="input-price"
+                  />
+                </div>
+              </div>
+              <div id="count-of-share-1" class="count-of-share">
+                <p>Количество акций к покупке:</p>
+                <span id="shares">0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="dist/selector.js"></script>
+    <script type="module" src="dist/form-creator.js"></script>
+    <script type="module" src="dist/average-section.js"></script>
+    <script type="module" src="dist/pubsub.js"></script>
+    <script type="module" src="dist/app.js"></script>
+    <script>
+      var exports = { __esModule: true };
+    </script>
+  </body>
+</html>
